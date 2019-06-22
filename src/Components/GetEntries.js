@@ -1,9 +1,8 @@
 import React from 'react';
 import Entries from './Sample.js';
 import './GetEntries.css';
+import 'bootstrap/dist/css/bootstrap.css';
 
-// get posts from online api
-// it's return a json file
 class GetEntries extends React.Component {
     constructor(props){
         super(props);
