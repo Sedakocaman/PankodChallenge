@@ -3,27 +3,18 @@ import Entries from './Sample.js';
 import './GetEntries.css';
 import 'bootstrap/dist/css/bootstrap.css';
 
-class GetEntries extends React.Component {
+class Movies extends React.Component {
     constructor(props) {
         super(props);
-
+        const result = Entries.filter(Entries => Entries.programType === "movie");
         this.state = {
-            posts: Entries
+            posts: result
         };
-        let arr = [];
-        Entries.forEach(function(data,index){
-            if(data.programType==="series"){
-               arr.push(data);
-               console.log(arr)
-            }
-        });
     }
-        render() {
+    render() {
         const {posts} = this.state;
         return(
             <div className="container-fluid">
-
-
                 <ul>
                     {
                         posts.map(post => (
@@ -43,4 +34,4 @@ class GetEntries extends React.Component {
         );
     }
 }
-export default GetEntries;
+export default Movies;
