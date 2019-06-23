@@ -4,27 +4,38 @@ import './GetEntries.css';
 import 'bootstrap/dist/css/bootstrap.css';
 
 class GetEntries extends React.Component {
-    constructor(props){
+    constructor(props) {
         super(props);
+
         this.state = {
-            posts :Entries
+            posts: Entries
         };
+        let arr = [];
+        Entries.forEach(function(data,index){
+            if(data.programType==="series"){
+               arr.push(data);
+               console.log(arr)
+            }
+        });
     }
-    render() {
+        render() {
         const {posts} = this.state;
         return(
-            <div>
+            <div className="container-fluid">
+
+
                 <ul>
                     {
                         posts.map(post => (
                             <li key={post.title} className="item">
                                 <div>
+                                    <img className="photo" src={post.images["Poster Art"].url} alt="Poster"/>
+                                </div>
+                                <div className="text-capitalize">
                                     <p className="title">{post.title}</p>
-                                    <p className="body">{post.description}</p>
-                                    <p>{post.programType}</p>
-                                    <p>{post.releaseYear}</p>
                                 </div>
                             </li>
+
                         ))
                     }
                 </ul>
