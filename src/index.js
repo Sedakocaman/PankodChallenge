@@ -4,26 +4,16 @@ import './index.css';
 import App from './Components/App';
 import * as serviceWorker from './serviceWorker';
 import { Route, Link, BrowserRouter as Router } from 'react-router-dom';
-import Series from './Components/Series';
-import Movies from './Components/Movies';
+import GetSeries from './Components/GetSeries';
+import GetMovies from './Components/GetMovies';
 
 const routing = (
     <Router>
         <div>
-            <ul>
-                <li>
-                    <Link to="/">Home</Link>
-                </li>
-                <li>
-                    <Link to="/series">Series</Link>
-                </li>
-                <li>
-                    <Link to="/movies">Movies</Link>
-                </li>
-            </ul>
+
             <Route exact path="/" component={App} />
-            <Route path="/series" component={Series} />
-            <Route path="/movies" component={Movies} />
+            <Route path="/series" component={GetSeries} />
+            <Route path="/movies" component={GetMovies} />
         </div>
     </Router>
 )

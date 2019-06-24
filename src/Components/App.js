@@ -1,14 +1,17 @@
 import React from 'react';
 import '../App.css';
-import Series from './Series';
-import Movies from './Movies';
+import AppHeader from './header';
+import Home from "./home";
+import AppFooter from "./footer";
+
 
 function App() {
   return (
     <div className="App">
       <header className="App-header">
-          <Movies/>
-          <Series/>
+          <AppHeader/>
+          <Home/>
+          <AppFooter/>
       </header>
     </div>
   );

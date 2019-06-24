@@ -1,21 +1,185 @@
-li.item{
-    height: 300px;
-    width: 200px;
-    font-size: 10px;
-}
+body
+{margin: 0;}
 ul{
     list-style: none;
+    padding: 0;
+
 }
-img.photo{
-    height: 280px;
-    width: 200px;
+li.item{
+    width: 158px;
+    display: inline-block;
+ }
+.img-post
+{
+    display: inline-block;
 }
-.title{
-    text-align: start;
-    color: black;
-    font-size: 12px;
+.img-post img
+{
+    width: 150px;
+    height: auto;
+}
+.img-post p
+{
+     text-align: left;
+    font-size: 10px;
+    color: #000;
+}
+.Arda{
+    color: red;
+    font-size: 90px;
+}
+/*Header page
+ */
+.header-bg
+{
+    background-color: #007bff
+}
+.header-bg .col-md-6 h1
+{
+    text-align: left;
+    font-size: 30px;
+    padding-top: 9px;
+
+}
+.log-in
+{
+    padding-top:19px;
+    text-align: right;
+}
+.log-in button
+{
+    background-color: transparent;
+    border: 0px;
+    color: #fff;
+}
+.log-in p
+{
+    display: inline-block;
+    color: #fff;
+    background-color: #414141;
+    padding: 5px;
+
+}
+/* Titles Programes*/
+.titles
+{
+    background-color: #414141;
+    margin-bottom: 40px;
+
+}
+.titles h1
+{
+    color: #fff;
+    font-weight: 400;
+    font-size: 22px;
+    text-align: left;
+    padding: 15px 0px 15px 0px;
+
+}
+/*home page*/
+.home-page
+{
+
+}
+.home-page
+{
+    text-align: left;
+}
+.home-page a
+{
+    display: inline-block;
+
+}
+.home-page a img
+{
+    width: 150px;
+    height: 100px;
+    background-color: gray
 }
 
-li{
+.home-page a h1
+{
+    font-size: 12px;
+    color: #000;
+
+}
+.footer
+{
+    background-color:#1e1e1e;
+    font-size: 12px;
+
+}
+.home-ft
+{
+    margin: 0px !important;
+}
+.footer ul
+{
+    text-align: left;
+}
+.footer ul li
+{
     display: inline-block;
+    font-weight: 300;
+    margin: 0px 0px 0px 15px;
+}
+.footer ul li span
+{
+    margin-left: 15px;
+}
+.copy
+{
+    text-align: left;
+}
+.social-media
+{
+}
+.social-media ul
+{
+    text-align: left;
+
+}
+.social-media ul li
+{
+    display: inline-block;
+    font-weight: 300;
+    margin: 0px
+}
+.store
+{
+
+}
+.store ul
+{
+    text-align: right;
+}
+@media screen and (max-width: 768px)
+{
+    .log-in
+    {
+        padding-top:19px;
+        text-align: right;
+        font-size: 11px;
+    }
+    .log-in p
+    {
+        display: inline-block;
+        color: #fff;
+        background-color: #000;
+        padding: 0px;
+
+    }
+    .header-bg .col-md-6 h1
+    {
+        text-align: left;
+        font-size: 15px;
+        padding-top: 15px;
+
+    }
+}
+
+.photo
+{
+    height: 300px;
+    width: 200px;
 }
