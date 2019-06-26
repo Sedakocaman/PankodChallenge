@@ -5,6 +5,7 @@ import App from "./App";
 import GetSeries from "./GetSeries";
 import GetMovies from "./GetMovies";
 import ReactDOM from "react-dom";
+import placeholder from '../assets/placeholder.png'
 
 const routing = (
     <Router>
@@ -21,17 +22,31 @@ class Home extends React.Component{
     render() {
         return(
             <div className="container-fluid">
+                <div className="row titles">
+                    <div className="container">
+                        <div className="row">
+                            <div className="col-md-12 col-12 col-sm-12">
+                                <h1>
+                                    Popular Titles
+                                </h1>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
                 <div className="row">
                     <div className="container">
                         <div className="row">
                                  <div className="col-md-12 home-page">
                              <Link to={"/series"}>
-                                 <img alt=""/>
+                                 <img src={placeholder} alt=""/>
                                 <h1>Popular Series</h1>
+                                 <p>SERIES</p>
                               </Link>
                               <Link to={"/movies"}>
-                                  <img alt=""/>
+                                  <img src={placeholder} alt=""/>
                                   <h1>Popular Movies</h1>
+                                  <h2>MOVIES</h2>
                               </Link>
                         </div>
 

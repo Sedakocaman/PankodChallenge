@@ -1,6 +1,13 @@
 import React from 'react';
 import './GetEntries.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
+import facebook from '../assets/social/facebook-white.svg'
+import instagram from '../assets/social/instagram-white.svg';
+import twitter from '../assets/social/twitter-white.svg';
+import appStore from '../assets/store/app-store.svg';
+import playStore from '../assets/store/play-store.svg';
+import windowsStore from '../assets/store/windows-store.svg';
+
 
 class AppFooter extends React.Component{
     render() {
@@ -8,7 +15,7 @@ class AppFooter extends React.Component{
             <div className="container-fluid">
                 <div className="row footer">
                     <div className="container">
-                        <div className="row">
+                        <div className="row site-map">
                             <div className="col-md-12 col-12 col-sm-12">
                                 <ul>
                                     <li className="home-ft">
@@ -44,13 +51,13 @@ class AppFooter extends React.Component{
                                 <div className="col-md-4 col-sm-6 col-6 social-media">
                             <ul>
                                 <li>
-                                    Facebook
+                                    <img className="fb" src={facebook} alt=""/>
                                 </li>
                                 <li>
-                                    Twitter
+                                    <img src={twitter} alt=""/>
                                 </li>
                                 <li>
-                                    İnstagram
+                                    <img src={instagram} alt=""/>
                                 </li>
                             </ul>
 
@@ -58,13 +65,13 @@ class AppFooter extends React.Component{
                                 <div className="col-md-8 col-6 col-sm-6 store">
                                     <ul>
                                         <li>
-                                            App Store
+                                            <img src={appStore} alt=""/>
                                         </li>
                                         <li>
-                                        Google Play
+                                            <img src={playStore} alt=""/>
                                         </li>
                                         <li>
-                                            Microsoft
+                                            <img src={windowsStore} alt=""/>
                                         </li>
                                     </ul>
                             </div>

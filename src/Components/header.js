@@ -21,27 +21,16 @@ class AppHeader extends React.Component{
                         <button>
                             Login
                         </button>
-                        <p>
+                        <a href= "#">
                             Start your free trial
-                        </p>
+                        </a>
                     </div>
             </div>
             </div>
                         </div>
                     </div>
                 </div>
-                    <div className="row titles">
-                        <div className="container">
-                            <div className="row">
-                                <div className="col-md-12 col-12 col-sm-12">
-                                    <h1>
-                                        Popular Titles
-                                    </h1>
 
-                                </div>
-                            </div>
-                        </div>
-                    </div>
             </div>
         )
     }

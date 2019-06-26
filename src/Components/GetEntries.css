@@ -1,14 +1,18 @@
 body
 {margin: 0;}
-ul{
+ul
+{
     list-style: none;
     padding: 0;
-
 }
 li.item{
-    width: 158px;
-    display: inline-block;
- }
+     display: inline-block;
+    margin-right: 24px;
+}
+.item img
+{
+    width: 100px;
+}
 .img-post
 {
     display: inline-block;
@@ -24,12 +28,7 @@ li.item{
     font-size: 10px;
     color: #000;
 }
-.Arda{
-    color: red;
-    font-size: 90px;
-}
-/*Header page
- */
+/*Header component*/
 .header-bg
 {
     background-color: #007bff
@@ -39,12 +38,14 @@ li.item{
     text-align: left;
     font-size: 30px;
     padding-top: 9px;
-
 }
 .log-in
 {
-    padding-top:19px;
+    padding-top:16px;
     text-align: right;
+    font-size: 18px;
+    padding-bottom: 14px;
+
 }
 .log-in button
 {
@@ -52,20 +53,24 @@ li.item{
     border: 0px;
     color: #fff;
 }
-.log-in p
+.log-in a
 {
     display: inline-block;
-    color: #fff;
+    color: #fff !important;
     background-color: #414141;
     padding: 5px;
-
+    text-decoration: none;
 }
-/* Titles Programes*/
+.log-in a:hover
+{
+    text-decoration: none;
+}
+
+/* Popular Titles */
 .titles
 {
     background-color: #414141;
     margin-bottom: 40px;
-
 }
 .titles h1
 {
@@ -74,13 +79,9 @@ li.item{
     font-size: 22px;
     text-align: left;
     padding: 15px 0px 15px 0px;
-
 }
+/*Header component end.*/
 /*home page*/
-.home-page
-{
-
-}
 .home-page
 {
     text-align: left;
@@ -88,31 +89,45 @@ li.item{
 .home-page a
 {
     display: inline-block;
-
+    margin-right: 15px;
 }
 .home-page a img
 {
-    width: 150px;
-    height: 100px;
-    background-color: gray
+    width: 135px;
+    height: 179px;
+    background-color: #000;
 }
-
 .home-page a h1
 {
     font-size: 12px;
     color: #000;
-
 }
-.footer
+.home-page a p
 {
-    background-color:#1e1e1e;
-    font-size: 12px;
-
+    position: absolute;
+    top: 39%;
+    left: 5%;
+    color: #fff;
+    font-size: 20px;
+}
+.home-page a h2
+{
+    position: absolute;
+    top: 41%;
+    font-size: 20px;
+    color: #fff;
+    left: 17%;
+    font-weight: 400;
 }
 .home-ft
 {
     margin: 0px !important;
 }
+/*footer component*/
+.footer
+{
+    background-color: #1e1e1e;
+    font-size: 12px;}
 .footer ul
 {
     text-align: left;
@@ -122,14 +137,22 @@ li.item{
     display: inline-block;
     font-weight: 300;
     margin: 0px 0px 0px 15px;
+    color: #fff;
+    font-size:12px;
 }
 .footer ul li span
 {
     margin-left: 15px;
 }
+.site-map
+{
+    margin-top: 20px;
+}
 .copy
 {
     text-align: left;
+    color: #808080;
+    font-size: 11px;
 }
 .social-media
 {
@@ -137,7 +160,6 @@ li.item{
 .social-media ul
 {
     text-align: left;
-
 }
 .social-media ul li
 {
@@ -145,14 +167,32 @@ li.item{
     font-weight: 300;
     margin: 0px
 }
+.social-media ul li img
+{
+    width: 20px;
+    margin-right: 15px;
+}
+.fb
+{
+    width: 13px !important;
+}
 .store
 {
-
+    display: inline-block;
 }
 .store ul
 {
     text-align: right;
 }
+.store ul li
+{
+    margin: 0px 0px 0px 20px;
+}
+.store ul li img
+{
+    width: 100px;
+}
+/*mobil */
 @media screen and (max-width: 768px)
 {
     .log-in
@@ -160,6 +200,7 @@ li.item{
         padding-top:19px;
         text-align: right;
         font-size: 11px;
+
     }
     .log-in p
     {
@@ -167,19 +208,11 @@ li.item{
         color: #fff;
         background-color: #000;
         padding: 0px;
-
     }
     .header-bg .col-md-6 h1
     {
         text-align: left;
         font-size: 15px;
         padding-top: 15px;
-
     }
-}
-
-.photo
-{
-    height: 300px;
-    width: 200px;
 }

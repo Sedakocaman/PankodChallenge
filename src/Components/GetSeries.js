@@ -2,49 +2,60 @@ import React from 'react';
 import Entries from './Sample.js';
 import './GetEntries.css';
 import 'bootstrap/dist/css/bootstrap.css';
+import AppHeader from "./header";
+import AppFooter from "./footer";
 
-class GetSeries extends React.Component {
-    componentDidMount(): void {
-        this.setState({
-            isLoading : false
-        })
-    }
+
+class GetMovies extends React.Component {
+
 
     constructor(props) {
         super(props);
         const result = Entries.filter(Entries => Entries.programType === "series");
-        console.log(result)
-
         this.state = {
-            posts: result,
-            isLoading : true
+            posts: result
         };
     }
-        render() {
+    render() {
         const {posts} = this.state;
-        const {isLoading} = this.state;
         return(
             <div className="container-fluid">
+                <div className="row titles">
+                    <AppHeader/>
+                    <div className="container">
+                        <div className="row">
+                            <div className="col-md-12 col-12 col-sm-12">
+                                <h1>
+                                    Popular Movies
+                                </h1>
 
-                <h1>Diziler</h1>
-                <ul>
-                    {isLoading ? 'Loading...' : ''}
-                    {
-                        !isLoading ? posts.map(post => (
-                            <li key={post.title} className="item">
-                                <div>
-                                    <img className="photo" src={post.images["Poster Art"].url} alt="Poster"/>
-                                </div>
-                                <div className="text-capitalize">
-                                    <p className="title">{post.title}</p>
-                                </div>
-                            </li>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div className="row">
+                    <div className="container">
+                        <div className="row">
+                    <ul>
+                        {
+                            posts.map(post => (
+                                <li key={post.title} className="item">
+                                    <div>
+                                        <img className="photo" src={post.images["Poster Art"].url} alt="Poster"/>
+                                    </div>
+                                    <div className="text-capitalize">
+                                        <p className="title">{post.title}</p>
+                                    </div>
+                                </li>
 
-                        )) :null
-                    }
-                </ul>
+                            ))
+                        }
+                    </ul> </div></div></div>
+                <div className="row">
+                <AppFooter/>
+                </div>
             </div>
         );
     }
 }
-export default GetSeries;
+export default GetMovies;
